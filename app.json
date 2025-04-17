@@ -23,6 +23,14 @@
       "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
+      [
+        "@intercom/intercom-react-native",
+        {
+          "appId": "du2wmdal",
+          "androidApiKey": "android_sdk-2f41384a77f0754b0072dc39de324df0643b8bff",
+          "iosApiKey": "ios_sdk-1aec774085d14fb55ea3143ef6773c6bd34a29ef"
+        }
+      ],
       "expo-router",
       [
         "expo-splash-screen",
