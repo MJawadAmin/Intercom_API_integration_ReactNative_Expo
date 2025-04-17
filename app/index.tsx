@@ -31,5 +31,5 @@ const styles = StyleSheet.create({
       width: 2,
       height: 2,
     },
-  }, // ✅ no extra parenthesis
+  },
 });
