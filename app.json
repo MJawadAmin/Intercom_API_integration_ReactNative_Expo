@@ -15,7 +15,14 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "permissions": [
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.VIBRATE",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.VIBRATE"
+      ],
+      "package": "com.jawadamin.Intercom_API_integration_ReactNative_Expo"
     },
     "web": {
       "bundler": "metro",
