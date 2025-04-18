@@ -1,4 +1,3 @@
-// app/index.tsx
 import React from 'react';
 import { View, Text, Button, StyleSheet } from 'react-native';
 import {
@@ -9,7 +8,7 @@ import {
   setLauncherVisibility,
 } from './services/intercom';
 
-export default function Index() {
+const Index = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Intercom Integration</Text>
@@ -33,7 +32,7 @@ export default function Index() {
       />
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -47,3 +46,5 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
 });
+
+export default Index;
