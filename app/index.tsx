@@ -1,9 +1,36 @@
-import { Text, View, StyleSheet } from 'react-native';
+// app/index.tsx
+import React from 'react';
+import { View, Text, Button, StyleSheet } from 'react-native';
+import {
+  loginIdentifiedUser,
+  loginUnidentifiedUser,
+  logoutUser,
+  showMessageComposer,
+  setLauncherVisibility,
+} from './services/intercom';
 
 export default function Index() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Home Screen</Text>
+      <Text style={styles.title}>Intercom Integration</Text>
+      <Button
+        title="Login Identified User"
+        onPress={() => loginIdentifiedUser('123', 'user@example.com')}
+      />
+      <Button title="Login Unidentified User" onPress={loginUnidentifiedUser} />
+      <Button title="Logout User" onPress={logoutUser} />
+      <Button
+        title="Show Message Composer"
+        onPress={() => showMessageComposer('Hello!')}
+      />
+      <Button
+        title="Show Launcher"
+        onPress={() => setLauncherVisibility(true)}
+      />
+      <Button
+        title="Hide Launcher"
+        onPress={() => setLauncherVisibility(false)}
+      />
     </View>
   );
 }
@@ -11,25 +38,12 @@ export default function Index() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#d2e1f3',
-    alignItems: 'center',
+    padding: 20,
     justifyContent: 'center',
   },
-  text: {
-    color: '#1c0202',
-    fontSize: 30,
-    fontWeight: 'bold',
+  title: {
+    fontSize: 24,
+    marginBottom: 20,
     textAlign: 'center',
-    margin: 10,
-    padding: 10,
-    borderWidth: 2,
-    borderColor: '#1c0202',
-    borderRadius: 10,
-    backgroundColor: '#f3f3f3',
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 2,
-      height: 2,
-    },
   },
 });
